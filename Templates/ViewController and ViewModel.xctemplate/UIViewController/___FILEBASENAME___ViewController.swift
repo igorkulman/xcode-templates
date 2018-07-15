@@ -1,22 +1,45 @@
-//___FILEHEADER___
+//
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  ___COPYRIGHT___
+//
 
 import UIKit
+import Foundation
+import RxSwift
+
+protocol ___FILEBASENAMEASIDENTIFIER___Delegate: class {
+
+}
 
 class ___VARIABLE_sceneName___ViewController: ___VARIABLE_viewControllerSubclass___ {
 
-    private var viewModel: ___VARIABLE_sceneName___ViewModel
+    // MARK: - Outlets
 
-    init(viewModel: ___VARIABLE_sceneName___ViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: "___VARIABLE_sceneName___ViewController", bundle: nil)
-    }
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    // MARK: - Properties
+
+    private var disposeBag = DisposeBag()
+
+    weak var delegate: ___FILEBASENAMEASIDENTIFIER___Delegate?
+    var viewModel: ___VARIABLE_sceneName___ViewModel
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupUI()
+        setupBinding()
+    }
+
+    // MARK: - Setup
+
+    private func setupUI() {
+
+    }
+
+    private func setupBinding() {
 
     }
 
